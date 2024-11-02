@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 
 const Book = ({book}) => {
-    const {bookId,bookName,author,image,review,rating,category,tags}=book
+    const {bookId,bookName,author,image,review,rating,tags,totalPages}=book
     return (
        
 
@@ -22,7 +22,9 @@ const Book = ({book}) => {
  <div>
     
  <h2 className="card-title">{bookName}</h2>
- <p className='card-title text-sm'>By:{author}</p>
+ <p className='card-title text-lg'>By : {author}</p>
+ <p className="card-title text-sm ">Total Page :   {totalPages}</p>
+ 
  <div className="border mt-5 border-dashed "></div>
  <div className='flex mt-10 justify-between'>
     <p>{tags}</p>
