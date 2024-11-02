@@ -61,9 +61,9 @@ const ListedBook = () => {
             <h3 className="text-3xl my-8 font-extrabold">Listed Books</h3>
 
             {/* Sorting for Read List */}
-            <div className="dropdown mt-10 mb-28">
+            <div className="dropdown mt-10 mb-28 mr-10">
                 <div tabIndex={0} role="button" className="text-white btn w-full bg-[#23be0a] m-1">
-                    {readSort ? `Sort Read List By: ${readSort}` : 'Sort Read List By'}
+                    {readSort ? `Sort Read List: ${readSort}` : 'Sort Read List'}
                 </div>
                 <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
                     <li className="btn p-3 text-[#23be0a] btn-outline" onClick={() => handleReadSort('Ratings')}>
@@ -78,7 +78,7 @@ const ListedBook = () => {
             {/* Sorting for Wish List */}
             <div className="dropdown mb-10">
                 <div tabIndex={0} role="button" className="text-white btn w-full bg-[#23be0a] m-1">
-                    {wishSort ? `Sort Wish List By: ${wishSort}` : 'Sort Wish List By'}
+                    {wishSort ? `Sort Wish List: ${wishSort}` : 'Sort Wish List'}
                 </div>
                 <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
                     <li className="btn p-3 text-[#23be0a] btn-outline" onClick={() => handleWishSort('Ratings')}>
@@ -98,7 +98,7 @@ const ListedBook = () => {
 
                 <TabPanel>
                     <h2 className="text-2xl">Books I read: {readList.length}</h2>
-                    <div className="grid grid-cols-3 gap-5">
+                    <div className="ml-14 lg:ml-0 grid lg:grid-cols-3 gap-5">
                         {readList.map(book => (
                             <Book key={book.bookId} book={book}></Book>
                         ))}
@@ -107,7 +107,7 @@ const ListedBook = () => {
                 
                 <TabPanel>
                     <h2 className="text-2xl">My Wish List: {wishList.length}</h2>
-                    <div className="grid grid-cols-3 gap-5">
+                    <div className="ml-14 lg:ml-0 grid lg:grid-cols-3 gap-5">
                         {wishList.map(book => (
                             <Book key={book.bookId} book={book}></Book>
                         ))}

@@ -24,8 +24,8 @@ const Nav = () => {
       <ul
         tabIndex={0}
         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-        <NavLink className="" to={"/"} >Home</NavLink>
-        <NavLink className="" to={"/listedBooks"} >Listed Books</NavLink>
+        <NavLink className="btn  p-3 text-[#23be0a] btn-outline" to={"/"} >Home</NavLink>
+        <NavLink className="btn  p-3 text-[#23be0a] btn-outline" to={"/listedBooks"} >Listed Books</NavLink>
 
       <NavLink className="btn  p-3 text-[#23be0a] btn-outline" to={"/about"}>About</NavLink>
       <NavLink className="btn  p-3 text-[#23be0a] btn-outline" to={"/dashboard"}>DashBoard</NavLink>
